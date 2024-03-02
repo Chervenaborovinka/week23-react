@@ -1,10 +1,17 @@
 import React from 'react';
 import "./Components.css";
+import "./theme-a.css";
+import "./theme-b.css";
 
 function Component(props) {
-    const theme = props.theme;
+    let sizeClassName;
+    if (props.theme === 'themeA') {
+        sizeClassName = "sizeA";
+    } else if (props.theme === 'themeB') {
+        sizeClassName = "sizeB";
+    }
     return (
-        <div className={theme.size}>
+        <div className={sizeClassName}>
             <div>
                 <div style={{ backgroundColor: props.bgColor }}>
                     <h3 className="pricing-header">{props.title}</h3>
@@ -18,3 +25,5 @@ function Component(props) {
 }
 
 export default Component;
+
+
