@@ -1,6 +1,6 @@
 import Component from "./Component";
-import themeA from "./theme-a.css";
-import themeB from "./theme-b.css";
+import "./theme-a.css";
+import "./theme-b.css";
 import "./variables.css"
 
 const Cards = () => {
